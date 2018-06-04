@@ -1,0 +1,47 @@
+1. The push, which adds an element to the array, and pop, which removes the last element in the array.
+(last in, first out)
+
+2. The enqueue that adds an element the the end of the array, and dequeue that removes the first element 
+of the array (first in, first out) 
+
+4.Yes is balanced
+
+5.No is not. LeftRotation(10)
+
+6. 2
+
+7.
+----
+------2
+--1-----5
+0------3---8
+
+8.
+// First we divide the unsorted list in two half, seconde we divide each half also in half until
+we get many arrays whit one element inside, third we merge the elements inside the arrays in to a new array, but this time sorted, fourth 
+we compare the first element of the array with the first element of the next array and pass the smalest element in to a new array, then 
+proside whit the secon element of the array, and we kip doing this until all the arrays merge in to one sorted array. 
+
+10.
+function compar(A, B) {
+    var i = 0;
+    var Alice = 0;
+    var Bob = 0;
+
+    function points(A, B) {
+        if (A.length > i) {
+            if (A[i] > B[i]) {
+                Alice += 1;
+            } else if (A[i] < B[i]) {
+                Bob += 1
+            } ;
+            i++
+            return points(A, B);
+        };
+
+        return "Alice have " + Alice + " points, and Bob have " + Bob + " points"
+    }
+
+   return points(A, B)
+}
+compar([5, 6, 7], [3, 6, 10])
